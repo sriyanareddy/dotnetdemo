@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: sriyanareddydotnetdemo 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sriyanareddydotnetdemo
+  template:
+    metadata:
+      labels:
+        app: sriyanareddydotnetdemo 
+    spec:
+      containers:
+        - name: sriyanareddydotnetdemo 
+          image: sammy.azurecr.io/sriyanareddydotnetdemo
+          ports:
+          - containerPort: 5000
