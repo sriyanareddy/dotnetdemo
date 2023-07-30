@@ -19,7 +19,7 @@ variables:
   imagePullSecret: 'sammy749832b6-auth'
 
   # Agent VM image name
-  vmImageName: 'sreddy'
+  vmImageName: 'sanju'
 
 
 stages:
