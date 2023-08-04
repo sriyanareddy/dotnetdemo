@@ -19,7 +19,7 @@ variables:
   imagePullSecret: 'sammyded4-auth'
 
   # Agent VM image name
-  vmImageName: 'ubuntu-latest'
+  vmImageName: 'sanju'
 
 
 stages:
@@ -29,7 +29,7 @@ stages:
   - job: Build
     displayName: Build
     pool:
-      vmImage: $(vmImageName)
+      name: $(vmImageName)
     steps:
     - task: Docker@2
       displayName: Build and push an image to container registry
@@ -52,7 +52,7 @@ stages:
   - deployment: Deploy
     displayName: Deploy test
     pool:
-      vmImage: $(vmImageName)
+      name: $(vmImageName)
     environment: 'test.sri'
     strategy:
       runOnce:
@@ -85,7 +85,7 @@ stages:
   - deployment: Deploy
     displayName: Deploy prod
     pool:
-      vmImage: $(vmImageName)
+      name: $(vmImageName)
     environment: 'prod.sri2'
     strategy:
       runOnce:
