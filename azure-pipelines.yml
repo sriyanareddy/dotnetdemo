@@ -3,9 +3,9 @@
   inputs:
     helmVersion: '2.14.1'
     installKubectl: true
+
 # Build and push image to Azure Container Registry; Deploy to Azure Kubernetes Service
 # https://docs.microsoft.com/azure/devops/pipelines/languages/docker
-
 trigger:
 - develop
 
