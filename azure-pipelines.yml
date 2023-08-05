@@ -29,7 +29,6 @@ variables:
   # Agent VM image name
   vmImageName: 'sanju'
 
-
 stages:
 - stage: Build
   displayName: Build stage
